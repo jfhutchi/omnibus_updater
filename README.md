@@ -19,6 +19,7 @@ Supports
 - mac_os_x
 - solaris
 - windows
+- aix
 
 Usage
 =====
