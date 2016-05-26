@@ -75,6 +75,8 @@ module OmnibusTrucker
           @attrs = {:platform => set[:platform_family], :platform_version => [[major, minor].join('.'), '10.7'].min}
         elsif(set[:platform_family] == 'windows')
           @attrs ={:platform => set[:platform], :platform_version => '2008r2'}
+        elsif(set[:platform_family] == 'aix')
+          @attrs={:platform => set[:platform], :platform_version => [[major, minor].join('.'), '6.1'].min}
         else
           @attrs = {:platform => set[:platform], :platform_version => set[:platform_version]}
         end
